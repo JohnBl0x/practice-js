@@ -19,12 +19,26 @@ class Human {
 }
 
 function compareInstances () {
-    if (Student instanceof Human) {
-        console.log("Yes, they are the same");
+    const stu  = new Student()
+    const hu = new Human()
+
+    if (stu instanceof Student && hu instanceof Student) {
+        console.log("both are from Student");
     } else {
-        throw new Error ("No, they are not the same")
+        throw new Error ("they are not from Student")
     }
+
+    if (stu instanceof Human && hu instanceof Human) {
+        console.log("both are from Human");
+    } else {
+        throw new Error ("they are not from Human")
+    }
+
 }
+
+
+
+
 
 try {
     compareInstances()
